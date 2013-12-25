@@ -13,14 +13,15 @@ import (
 var StrokeMap map[string]int
 
 func init() {
-	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
-	if err != nil {
-		panic(err)
-	}
-	filepath := path.Join(dir, "/dat/Stroke.dat")
+	// dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// filepath := path.Join(dir, "/dat/Stroke.dat")
 
 	// FIXME
-	filepath = "/Users/fayland/go/src/chinese_stroke/dat/Stroke.dat"
+	gopath := os.Getenv("GOPATH")
+	filepath = path.Join(gopath, "/chinese_stroke/dat/Stroke.dat")
 
 	file, err := os.Open(filepath)
 	if err != nil {
