@@ -21,7 +21,7 @@ func init() {
 
 	// FIXME
 	gopath := os.Getenv("GOPATH")
-	filepath := path.Join(gopath, "/chinese_stroke/dat/Stroke.dat")
+	filepath := path.Join(gopath, "/src/github.com/fayland/chinese_stroke/dat/Stroke.dat")
 
 	file, err := os.Open(filepath)
 	if err != nil {
